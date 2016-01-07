@@ -3,10 +3,11 @@
     <h1>Best game ever!</h1>
     <p id="Text"></p>
     <p>Money Spent: $<span id="money">0</span></p>
+    <p>Victories: <span id="wins">0</span></p>
     <p>
       <button onclick="lose();">Press to play the game</button>
       or, 
-      <button onclick="win();document.getElementById('money').innerText = Number(document.getElementById('money').innerText) + 1">Press to pay $1</button>
+      <button onclick="win();document.getElementById('money').innerText = Number(document.getElementById('money').innerText) + 1;">Press to pay $1</button>
     </p>
     <script>
       function lose() {
@@ -20,6 +21,7 @@
       }
       function win() {
         document.getElementById("Text").innerText = "Congratulations! You won the game!";
+        document.getElementById('wins').innerText = Number(document.getElementById('wins').innerText) + 1;
       }
     </script>
   </body>
