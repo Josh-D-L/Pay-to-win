@@ -1,3 +1,25 @@
 <html>
-  
+  <body style="text-align: center">
+    <p id="Text"></p>
+    <p>Money Spent: <span id="money"></span></p>
+    <p>
+      <button onclick="lose();">Press to play the game</button>
+      or, 
+      <button onclick="win();document.getElementById('money').innerText = Number(document.getElementById('money').innerText) + 1">Press to pay $1</button>
+    </p>
+    <script>
+      function lose() {
+        var random = Math.random();
+        if (random != 1) {
+          document.getElementById("Text").innerText = "You lose. Maybe next time!";
+        }
+        else {
+          win();
+        }
+      }
+      function win() {
+        document.getElementById("Text").innerText = "Congratulations! You won the game!";
+      }
+    </script>
+  </body>
 </html>
