@@ -23,6 +23,14 @@
         document.getElementById("Text").innerText = "Congratulations! You won the game!";
         document.getElementById('wins').innerText = Number(document.getElementById('wins').innerText) + 1;
       }
+      window.setInterval(function() {
+        var random = Math.random();
+        if (random == 0) {
+          document.getElementById('victories').innerText = Number(document.getElementById('victories').innerText) + 1;
+        }
+        document.getElementById('attempt').innerText = Number(document.getElementById('attempts').innerText) + 1;
+      }, 100)
     </script>
+    <span style="display: none" id="victories">0</span><span style="display: none" id="attempts">0</span>
   </body>
 </html>
