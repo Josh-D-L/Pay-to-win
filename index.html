@@ -25,14 +25,13 @@
       }
       var victories = 0;
       var attempts = 0;
-      window.setInterval(function() {
+      while (victories = 0) {
         var random = Math.random();
         if (random == 0) {
           victories = victories + 1;
         }
         attempts = attempts + 1;
-        console.log(victories + " / " + attempts);
-      }, 100)
-    </script>
+      }
+      console.log(victories + " / " + attempts);
   </body>
 </html>
